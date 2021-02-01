@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ko" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>todolist</title>
+    <link href="hw02.css" type="text/css" rel="stylesheet">
+    <link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.7.0/css/all.css' integrity='sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ' crossorigin='anonymous'>
+  </head>
+  <body onload="startlist()">
+    <button type="button" name="button" onclick="viewaddbox()">add</button>
+    <button type="button" name="button" onclick="viewsearchbox()">search</button>
+    <br /><br /><br />
+
+    <table>
+      <tr><th class="moca">가족</th><th class="azure">학교</th></tr>
+      <tr><td ondrop="drop(event)" ondragover="allowDrop(event)"><ul id="familytable"></ul></td>
+          <td ondrop="drop(event)" ondragover="allowDrop(event)"><ul id="schooltable"></ul></td></tr>
+      <tr><th class="moca">여행</th><th class="azure">운동</th></tr>
+      <tr><td  ondrop="drop(event)" ondragover="allowDrop(event)"><ul id="traveltable"></ul></td>
+          <td  ondrop="drop(event)" ondragover="allowDrop(event)"><ul id="exercisetable"></ul></td></tr>
+    </table>
+
+    <!-- 추가 눌렀을 때 뜨는 창  -->
+    <div class="box" id="addbox">
+      <br /> <br />
+      할일 분류 :
+      <select id="selectlist" name="dolist" >
+        <option value="가족">가족</option>
+        <option value="학교">학교</option>
+        <option value="여행">여행</option>
+        <option value="운동">운동</option>
+      </select>
+      <br /> <br />
+      메모 :
+      <input id="addmemo" type="text" name="addmemo" value="" style="width:300px;">
+      <br /> <br />
+      시작 날짜 :
+      <input id="startday" type="date" name="date">
+      <br /> <br />
+      끝나는 날짜 :
+      <input id="endday" type="date" name="date">
+      <br /> <br />
+      <button type="button" name="button" onclick="addlist()">Submit</button>
+      <button type="button" name="button" onclick="closeaddbox()">Close</button>
+    </div>
+
+    <!-- 검색 눌렀을 때 뜨는 창  -->
+    <div class="box" id="searchbox">
+      <br /> <br />
+      메모 키워드 :
+      <input id="memokeyword" type="text" name="memokeyword" value="" style="width:250px;">
+      <br /> <br />
+      시작 날짜 :
+      <input id="searchstartday" type="date" name="date">
+      <br /> <br />
+      끝나는 날짜 :
+      <input id="searchendday" type="date" name="date">
+      <br /> <br />
+      정렬 기준 :
+      <select id="searchlist" name="dolist">
+        <option value="메모">메모</option>
+        <option value="시작 날짜">시작 날짜</option>
+        <option value="끝나는 날짜">끝나는 날짜</option>
+      </select>
+      <br /> <br />
+      <input type="radio" name="order" value="오름차순">오름차순
+      <input type="radio" name="order" value="내림차순">내림차순
+      <button type="button" name="button" onclick="checkorder()">Submit</button>
+    </div>
+
+    <!-- 검색된 것 띄울 창 -->
+    <div>
+      <ul id="resultsearch"></ul>
+    </div>
+
+    <script src="hw02.js"></script>
+  </body>
+</html>

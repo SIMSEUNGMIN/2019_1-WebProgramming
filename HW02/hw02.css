@@ -1,0 +1,59 @@
+table{
+  position: absolute;
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+
+th, td{
+  border: 1px solid black;
+}
+
+th{
+  text-align: center;
+  width: 600px;
+  height: 20px;
+}
+
+td{
+  vertical-align: top;
+  width: 600px;
+  height: 250px;
+}
+
+.moca {
+   background-color: moccasin;
+}
+
+.azure {
+  background-color: azure;
+}
+
+/* 추가랑 검색에서 버튼 클릭하면 나오는 박스 css */
+.box {
+  display: none;
+  position: absolute;
+  border : 1px solid lightblue;
+  background-color: lightblue;
+  height: 300px;
+  width: 400px;
+  margin-top: 100px;
+  margin-left: 370px;
+  padding-left: 30px;
+}
+
+/* 일정에서 x 표시 클릭할 때 색깔 바뀌게 함 */
+.delspan:hover {
+  color: gray;
+}
+
+/* 검색 눌렀을 때 박스 크기 조정 */
+#searchbox {
+  height: 290px;
+}
+
+/* 정렬 내용 위치 */
+#resultsearch {
+  position: absolute;
+  margin-top: 575px;
+
+}
