@@ -1,0 +1,106 @@
+table{
+  border: 1px solid black;
+  border-collapse: collapse;
+  margin: auto;
+}
+
+th, td{
+  border: 1px solid black;
+  width: 100px;
+  height: 100px;
+}
+
+th{
+  text-align: center;
+}
+
+td{
+  font-style: italic;
+  vertical-align: top;
+}
+
+.cells{
+  font-style: normal !important;
+  color: black;
+  margin: auto;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.sun{
+  color: red;
+}
+
+.sat{
+  color: blue;
+}
+
+.window {
+  display: none; /* Hidden by default */
+  margin: auto;
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 300px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+.add-content {
+  background-color: #fefefe;
+  margin: auto;
+  vertical-align: middle;
+  padding: 30px;
+  align-items: center;
+  border: 1px solid #888;
+  text-align: center;
+  width: 200px;
+  height: 100px;
+}
+
+.modi-content{
+  background-color: #fefefe;
+  margin: auto;
+  vertical-align: middle;
+  padding: 20px;
+  align-items: center;
+  border: 1px solid #888;
+  text-align: center;
+  font-size: 15px;
+  width: 300px;
+  height: 150px;
+}
+
+
+/* The Close Button */
+.close {
+  color: #aaaaaa;
+  float: right;
+  padding-right: 5px;
+  font-size: 10px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+#modiDay{
+  width: 120px;
+}
+
+#modiNumber{
+  width: 30px;
+}
+
+#mo{
+  padding-left: 30px;
+  float: left;
+}
